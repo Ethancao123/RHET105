@@ -17,10 +17,41 @@
         body {
             background: #eee;
             font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-            font-size: 14px;
+            font-size: 40px;
             color: #000;
             margin: 0;
             padding: 0;
+        }
+
+        .intro {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size: 30px;
+            overflow: hidden;
+            max-width: 600px;
+            padding-right: 5%;
+            padding-left: 5%;
+        }
+
+        .current {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size: 20px;
+            overflow: hidden;
+            text-align: justify;
+            padding-right: 5%;
+            padding-left: 5%;
+            padding-bottom: 30%;
+            width: 100%;
+        }
+
+        .future {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size: 20px;
+            overflow: hidden;
+            width: 100%;
+            text-align: justify;
+            padding-right: 5%;
+            padding-left: 5%;
+            padding-top: 30%;
         }
 
         .swiper {
@@ -37,6 +68,11 @@
             align-items: center;
         }
 
+        .image {
+            padding-right: 5%;
+            padding-left: 5%; 
+        }
+
         .swiper-slide img {
             display: block;
             width: 100%;
@@ -50,15 +86,66 @@
     <!-- Swiper -->
     <div class="swiper mySwiper">
         <div class="swiper-wrapper">
-            <div class="swiper-slide">Slide 1</div>
-            <div class="swiper-slide">Slide 2</div>
-            <div class="swiper-slide">Slide 3</div>
-            <div class="swiper-slide">Slide 4</div>
-            <div class="swiper-slide">Slide 5</div>
-            <div class="swiper-slide">Slide 6</div>
-            <div class="swiper-slide">Slide 7</div>
-            <div class="swiper-slide">Slide 8</div>
-            <div class="swiper-slide">Slide 9</div>
+            <div class="swiper-slide" style="background-color:lightgray;"><div class="intro">
+                The 
+                <strong>American power grid</strong>
+                is considered one of the world's largest objects yet many parts of it are 
+                <strong>old and outdated</strong>
+                <br>
+                <br>
+                A lack of sensors and internet connectivity makes the transition to 
+                <strong>renewable energy</strong> 
+                creates demand for 
+                <strong>novel solutions</strong>
+                as customers expect power even during days when generating renewable energy is impossible 
+            </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="current">
+                    Currently, Generation facilities monitor the consumption of electricity and adjust their demand accordingly
+                </div>
+                <div class="future">
+                    With renewable energy, companies can no longer control when or how much power is generated A smart grid would adjust demand based on generation capacity, reducing the need for excess generation capacity
+                </div>
+            </div>
+
+            <div class="swiper-slide">
+                <div class="current">
+                    In America, there are three independent power grids. High voltage transmission lines transmit electricity over long distances and substations distribute electricity to cities and towns.
+                </div>
+                <div class="image">
+
+                </div>
+                <div class="future">
+                    With a smart grid, it's possible to connect different regions with European style interconnectors and the addition of time of use rates would encourage the development of power storage
+                </div>
+            </div>
+
+            <div class="swiper-slide">
+                <div class="current">
+                    When a single fault occurs due to downed power lines and aging infrastructure, utilities need to shut off electricity to entire neighborhoods and send out crews to manually find and repair problems
+                </div>
+                <div class="future">
+                    smart system of disconnects within a neighborhood would automatically isolate problems and notify crews of their location. With protective technologies, specific regions could be isolated and worked on without needing to shut off power to an entire neighborhood. 
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="current">
+                    The breaker box within a home serves as a safety mechanism which prevents homes from using more power than their connection to the grid can support
+
+                </div>
+                <div class="future">
+                    With smart breaker boxes, high wattage devices could be prevented from operating simultaneously. This allows homeowners to install additional electrical equipment such as water heaters and stoves without upgrading their entire home's electrical system.
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="current">
+                    Loads within homes consume electricity when turned on and sit idle when not in use
+                </div>
+                <div class="future">
+                    Devices can be designed to harness time of use rates by charging internal batteries during off hours and running off of stored energy during peak hours. Devices could also use a combination of stored power and grid power to reduce their electrical requirements. This results in significant savings for homeowners and means that our devices can consume more energy from renewable sources.
+                </div>
+            </div>
         </div>
         <div class="swiper-pagination"></div>
     </div>
