@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <title>The Power Grid</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <style>
@@ -23,6 +23,14 @@
             padding: 0;
         }
 
+        .title {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size: 60px;  
+            color: darkslategrey;
+            padding-top: 5%;
+            padding-bottom: 45%;
+        }
+
         .intro {
             font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
             font-size: 30px;
@@ -30,6 +38,7 @@
             max-width: 600px;
             padding-right: 5%;
             padding-left: 5%;
+            color: darkslategrey;
         }
 
         .current {
@@ -54,6 +63,14 @@
             padding-top: 30%;
         }
 
+        .side {
+            padding-right: 5%;
+            padding-left: 5%;
+            padding-top: 30%;
+            padding-bottom: 30%;
+            width: 50%;
+        }
+
         .swiper {
             width: 100%;
             height: 100%;
@@ -70,7 +87,8 @@
 
         .image {
             padding-right: 5%;
-            padding-left: 5%; 
+            padding-left: 5%;
+            width: 50%;
         }
 
         .swiper-slide img {
@@ -79,72 +97,136 @@
             height: 100%;
             object-fit: cover;
         }
+
+        .background {
+            background-attachment: fixed; 
+            background-image: url('/img/power-lines.png'); 
+            background-size:cover ; 
+            background-repeat: no-repeat; 
+            background-position: center 70%;
+            background-size: 100%;
+            background-color: #f5edd6;
+        }
+        @
     </style>
 </head>
 
-<body>
+<body class="background" >
     <!-- Swiper -->
     <div class="swiper mySwiper">
         <div class="swiper-wrapper">
-            <div class="swiper-slide" style="background-color:lightgray;"><div class="intro">
-                The 
-                <strong>American power grid</strong>
-                is considered one of the world's largest objects yet many parts of it are 
-                <strong>old and outdated</strong>
-                <br>
-                <br>
-                A lack of sensors and internet connectivity makes the transition to 
-                <strong>renewable energy</strong> 
-                creates demand for 
-                <strong>novel solutions</strong>
-                as customers expect power even during days when generating renewable energy is impossible 
+            <div class="swiper-slide" style="background-attachment: scroll ; background-color:transparent; background-size: cover;">
+                <div class="title">Why America Needs a Smart Grid</div>
             </div>
+            <div class="swiper-slide" style="background-attachment: scroll ; backdrop-filter: blur(8px) ; background-color:transparent ; background-size: cover;">
+                <div class="intro">
+                    The
+                    <strong>American power grid</strong>
+                    is considered one of the world's largest objects yet many parts of it are
+                    <strong>old and outdated</strong>
+                    <br>
+                    <br>
+                    A lack of sensors and internet connectivity makes the transition to
+                    <strong>renewable energy</strong>
+                    creates demand for
+                    <strong>novel solutions</strong>
+                    as customers expect power even during days when generating renewable energy is impossible
+                </div>
             </div>
             <div class="swiper-slide">
-                <div class="current">
-                    Currently, Generation facilities monitor the consumption of electricity and adjust their demand accordingly
-                </div>
-                <div class="future">
-                    With renewable energy, companies can no longer control when or how much power is generated A smart grid would adjust demand based on generation capacity, reducing the need for excess generation capacity
-                </div>
-            </div>
-
-            <div class="swiper-slide">
-                <div class="current">
-                    In America, there are three independent power grids. High voltage transmission lines transmit electricity over long distances and substations distribute electricity to cities and towns.
-                </div>
                 <div class="image">
-
+                    <img src="/img/energy-pie.png" alt="Energy pie chart" class="image">
                 </div>
-                <div class="future">
-                    With a smart grid, it's possible to connect different regions with European style interconnectors and the addition of time of use rates would encourage the development of power storage
+                <div class="side">
+                    <div class="current">
+                        Currently, generation facilities monitor the consumption of electricity and adjust their demand
+                        accordingly
+                    </div>
+                    <div class="future">
+                        With renewable energy, companies can no longer control when or how much power is generated A
+                        smart grid would adjust demand based on generation capacity, reducing the need for excess
+                        generation capacity
+                    </div>
                 </div>
             </div>
 
             <div class="swiper-slide">
-                <div class="current">
-                    When a single fault occurs due to downed power lines and aging infrastructure, utilities need to shut off electricity to entire neighborhoods and send out crews to manually find and repair problems
+                <div class="image">
+                    <img src="img/US-grids.png" alt = "Map of American power grids" class="image">
                 </div>
-                <div class="future">
-                    smart system of disconnects within a neighborhood would automatically isolate problems and notify crews of their location. With protective technologies, specific regions could be isolated and worked on without needing to shut off power to an entire neighborhood. 
-                </div>
-            </div>
-            <div class="swiper-slide">
-                <div class="current">
-                    The breaker box within a home serves as a safety mechanism which prevents homes from using more power than their connection to the grid can support
+                <div class="side">
+                    <div class="current">
+                        In America, there are three independent power grids. High voltage transmission lines transmit
+                        electricity over long distances and substations distribute electricity to cities and towns.
+                    </div>
 
+                    <div class="future">
+                        With a smart grid, it's possible to connect different regions with European style
+                        interconnectors
+                        and the addition of time of use rates would encourage the development of power storage
+                    </div>
                 </div>
-                <div class="future">
-                    With smart breaker boxes, high wattage devices could be prevented from operating simultaneously. This allows homeowners to install additional electrical equipment such as water heaters and stoves without upgrading their entire home's electrical system.
+            </div>
+
+            <div class="swiper-slide">
+                <div class="image">
+                    <img src="img/home-power.png" alt="Diagram of how power enters homes" class="image">
+                </div>
+                <div class="side">
+                    <div class="current">
+                        When a single fault occurs due to downed power lines and aging infrastructure, utilities need to
+                        shut off electricity to entire neighborhoods and send out crews to manually find and repair
+                        problems
+                    </div>
+                    <div class="future">
+                        smart system of disconnects within a neighborhood would automatically isolate problems and
+                        notify
+                        crews of their location. With protective technologies, specific regions could be isolated and
+                        worked
+                        on without needing to shut off power to an entire neighborhood.
+                    </div>
                 </div>
             </div>
             <div class="swiper-slide">
-                <div class="current">
-                    Loads within homes consume electricity when turned on and sit idle when not in use
+                <div class="image">
+                    <img src="img/smart-breaker.png" alt="Picture of smart breaker panel" class="image" style="width: 70%; align-self: center;">
                 </div>
-                <div class="future">
-                    Devices can be designed to harness time of use rates by charging internal batteries during off hours and running off of stored energy during peak hours. Devices could also use a combination of stored power and grid power to reduce their electrical requirements. This results in significant savings for homeowners and means that our devices can consume more energy from renewable sources.
+                <div class="side">
+                    <div class="current">
+                        The breaker box within a home serves as a safety mechanism which prevents homes from using more
+                        power than their connection to the grid can support
+
+                    </div>
+                    <div class="future">
+                        With smart breaker boxes, high wattage devices could be prevented from operating simultaneously.
+                        This allows homeowners to install additional electrical equipment such as water heaters and
+                        stoves
+                        without upgrading their entire home's electrical system.
+                    </div>
                 </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="image">
+                    <img src="img/EV-charging.png" class="image">
+                </div>
+                <div class="side">
+                    <div class="current">
+                        Loads within homes consume electricity when turned on and sit idle when not in use
+                    </div>
+                    <div class="future">
+                        Devices can be designed to harness time of use rates by charging internal batteries during off
+                        hours
+                        and running off of stored energy during peak hours. Devices could also use a combination of
+                        stored
+                        power and grid power to reduce their electrical requirements. This results in significant
+                        savings
+                        for homeowners and means that our devices can consume more energy from renewable sources.
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide" style="background-attachment: scroll ; background-color:transparent; background-size: cover; backdrop-filter: blur(8px) ;">
+                <div class="title">Further Reading</div>
+
             </div>
         </div>
         <div class="swiper-pagination"></div>
@@ -154,7 +236,7 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 
     <!-- Initialize Swiper -->
-    
+
     <script>
         var swiper = new Swiper(".mySwiper", {
             direction: "vertical",
