@@ -25,7 +25,7 @@
 
         .title {
             font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-            font-size: 60px;  
+            font-size: 60px;
             color: darkslategrey;
             padding-top: 5%;
             padding-bottom: 45%;
@@ -99,10 +99,10 @@
         }
 
         .background {
-            background-attachment: fixed; 
-            background-image: url("img/power-lines.png"); 
-            background-size:cover ; 
-            background-repeat: no-repeat; 
+            background-attachment: fixed;
+            background-image: url("img/power-lines.png");
+            background-size: cover;
+            background-repeat: no-repeat;
             background-position: center 70%;
             background-size: 100%;
             background-color: #f5edd6;
@@ -110,14 +110,16 @@
     </style>
 </head>
 
-<body class="background" >
+<body class="background">
     <!-- Swiper -->
     <div class="swiper mySwiper">
         <div class="swiper-wrapper">
-            <div class="swiper-slide" style="background-attachment: scroll ; background-color:transparent; background-size: cover;">
+            <div class="swiper-slide"
+                style="background-attachment: scroll ; background-color:transparent; background-size: cover;">
                 <div class="title">Why America Needs a Smart Grid</div>
             </div>
-            <div class="swiper-slide" style="background-attachment: scroll ; backdrop-filter: blur(8px) ; background-color:transparent ; background-size: cover;">
+            <div class="swiper-slide"
+                style="background-attachment: scroll ; backdrop-filter: blur(8px) ; background-color:transparent ; background-size: cover;">
                 <div class="intro">
                     The
                     <strong>American power grid</strong>
@@ -151,7 +153,7 @@
 
             <div class="swiper-slide">
                 <div class="image">
-                    <img src="img/US-grids.png" alt = "Map of American power grids" class="image">
+                    <img src="img/US-grids.png" alt="Map of American power grids" class="image">
                 </div>
                 <div class="side">
                     <div class="current">
@@ -188,7 +190,8 @@
             </div>
             <div class="swiper-slide">
                 <div class="image">
-                    <img src="img/smart-breaker.png" alt="Picture of smart breaker panel" class="image" style="width: 70%; align-self: center;">
+                    <img src="img/smart-breaker.png" alt="Picture of smart breaker panel" class="image"
+                        style="width: 70%; align-self: center;">
                 </div>
                 <div class="side">
                     <div class="current">
@@ -223,7 +226,8 @@
                     </div>
                 </div>
             </div>
-            <div class="swiper-slide" style="background-attachment: scroll ; background-color:transparent; background-size: cover; backdrop-filter: blur(8px) ;">
+            <div class="swiper-slide"
+                style="background-attachment: scroll ; background-color:transparent; background-size: cover; backdrop-filter: blur(8px) ;">
                 <div class="title">Further Reading</div>
 
             </div>
@@ -243,12 +247,31 @@
                 el: ".swiper-pagination",
                 type: "progressbar",
             },
+            freeMode: false,
             mousewheel: true,
             navigation: {
                 nextEl: "null",
                 prevEl: "null",
             },
+            on: {
+                afterInit: function () {
+                    console.log("start")
+                    console.log(swiper.freeMode)
+                },
+            },
+            on: {
+                slideChange: function () {
+                    if (swiper.activeIndex >= 2 && swiper.activeIndex <= swiper.slides.length - 2) {
+                        swiper.params.freeMode.enabled = true;
+                    } else {
+                        swiper.params.freeMode.enabled = false;
+                    }
+                    console.log(swiper.activeIndex)
+                    console.log(swiper.slides.length)
+                },
+            },
         });
+
     </script>
 </body>
 
