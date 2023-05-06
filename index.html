@@ -29,6 +29,18 @@
             color: darkslategrey;
             padding-top: 5%;
             padding-bottom: 45%;
+            width: 100%;
+            display: block;
+        }
+
+        .end {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            font-size: 60px;
+            color: darkslategrey;
+            padding-top: 10%;
+            padding-bottom: 10%;
+            width: 100%;
+            display: block;
         }
 
         .intro {
@@ -39,11 +51,12 @@
             padding-right: 5%;
             padding-left: 5%;
             color: darkslategrey;
+            width: 100%;
         }
 
         .current {
             font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-            font-size: 20px;
+            font-size: 25px;
             overflow: hidden;
             text-align: justify;
             padding-right: 5%;
@@ -54,7 +67,7 @@
 
         .future {
             font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-            font-size: 20px;
+            font-size: 25px;
             overflow: hidden;
             width: 100%;
             text-align: justify;
@@ -71,6 +84,45 @@
             width: 50%;
         }
 
+        .image {
+            padding-right: 5%;
+            padding-left: 5%;
+            width: 50%;
+        }
+
+        .video {
+            width: 560;
+            height: 315;
+        }
+
+        @media (max-width : 500px) {
+            .side {
+                width: 100%;
+            }
+
+            .image {
+                width: 100%;
+            }
+
+            .current {
+                font-size: 13px;
+            }
+
+            .future {
+                font-size: 13px;
+            }
+
+            .end {
+                padding-top: 60%;
+                font-size: 30px;
+            }
+
+            .video {
+                width: 280;
+                height: 157;
+            }
+        }
+
         .swiper {
             width: 100%;
             height: 100%;
@@ -79,17 +131,13 @@
         .swiper-slide {
             text-align: center;
             font-size: 18px;
-            background: #fff;
+            background: lightgray;
             display: flex;
             justify-content: center;
             align-items: center;
         }
 
-        .image {
-            padding-right: 5%;
-            padding-left: 5%;
-            width: 50%;
-        }
+
 
         .swiper-slide img {
             display: block;
@@ -226,10 +274,42 @@
                     </div>
                 </div>
             </div>
+            <div class="swiper-slide">
+                <div class="image">
+                    <img src="img/TAC.png" class="image">
+                </div>
+                <div class="side">
+                    <div class="current">
+                        The Ameren Illinois Technology Applications Center (TAC) in Champaign, IL is one of the leading
+                        sites
+                        for testing new grid technologies. Located in the University of Illinois Urbana Champaign's
+                        research park
+                        the TAC allows companies and researchers to test how their products would interact with a smart
+                        grid
+                        sites like these are building the future of grid technology and continuous government funding
+                        makes it possible.
+                    </div>
+                    <div class="future">
+
+                    </div>
+                </div>
+            </div>
             <div class="swiper-slide"
                 style="background-attachment: scroll ; background-color:transparent; background-size: cover; backdrop-filter: blur(8px) ;">
-                <div class="title">Further Reading</div>
-
+                <div class="end">Dive Deeper
+                    <br>
+                    <div>
+                        <iframe class="video" src="https://www.youtube.com/embed/X2eYdAR0ka4?controls=0"></iframe>
+                        <iframe class="video" src="https://www.youtube.com/embed/v1BMWczn7JM?controls=0"></iframe>
+                    </div>
+                    <br>
+                    Take Action
+                    <br>
+                    <div>
+                        <iframe class="video" src="https://www.youtube.com/embed/EdnW0kUV59w?controls=0"></iframe>
+                        <iframe class="video" src="https://www.youtube.com/embed/CVLLNjSLJTQ?controls=0"></iframe>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="swiper-pagination"></div>
@@ -252,23 +332,6 @@
             navigation: {
                 nextEl: "null",
                 prevEl: "null",
-            },
-            on: {
-                afterInit: function () {
-                    console.log("start")
-                    console.log(swiper.freeMode)
-                },
-            },
-            on: {
-                slideChange: function () {
-                    if (swiper.activeIndex >= 2 && swiper.activeIndex <= swiper.slides.length - 2) {
-                        swiper.params.freeMode.enabled = true;
-                    } else {
-                        swiper.params.freeMode.enabled = false;
-                    }
-                    console.log(swiper.activeIndex)
-                    console.log(swiper.slides.length)
-                },
             },
         });
 
